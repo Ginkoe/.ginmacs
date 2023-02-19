@@ -14,11 +14,7 @@
   )
 
 
-(use-package magit
-  :custom
-  ;; Displays diff in same buffer
-  (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1)
-  )
+(use-package magit)
 
 
 (use-package term
