@@ -11,6 +11,20 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
+
+
+
+;; visual clues line number 
+(column-number-mode)
+(global-display-line-numbers-mode t)
+;; Disable line numbers for some modes
+(dolist (mode '(org-mode-hook
+                term-mode-hook
+                shell-mode-hook
+                treemacs-mode-hook
+                eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 ;; theme
 (add-to-list 'custom-theme-load-path "~/.ginconfig/themes")
 (load-theme 'catppuccin t)
