@@ -15,4 +15,6 @@
 (add-to-list 'custom-theme-load-path "~/.ginconfig/themes")
 (load-theme 'catppuccin t)
 
+(set-window-margins (selected-window) 1 1)
+
 (provide 'rice)
