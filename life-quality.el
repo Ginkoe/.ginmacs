@@ -45,6 +45,9 @@
   (setq sp-show-pair-from-inside t)
   )
 
+;; move back up files into .trash folder
+(setq backup-directory-alist '((".*" . "~/.Trash")))
+
 
 
 (provide 'life-quality)
