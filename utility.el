@@ -9,6 +9,7 @@
   )
 
 
+
 (use-package counsel-projectile
   :config (counsel-projectile-mode)
   )
@@ -35,5 +36,12 @@
   (setq term-prompt-regexp "^[^#$%>\n]*[#$%>] *")  ;; Set this to match your custom shell prompt
   ;;(setq vterm-shell "zsh")                       ;; Set this to customize the shell to launch
   (setq vterm-max-scrollback 10000))
+
+;; org mode
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 (provide 'utility)
