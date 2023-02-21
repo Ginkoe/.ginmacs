@@ -31,4 +31,14 @@
 
 (set-window-margins (selected-window) 1 1)
 
+
+;; emacs size
+(setq initial-frame-alist
+      (append initial-frame-alist
+              '((left   . 0)
+                (top    . 0)
+                (width  . 210)
+                (height . 59))))
+
+
 (provide 'rice)
